@@ -1,6 +1,7 @@
 import * as React from 'react';
 import TextFields from './textFild';
 import EndButtons from './EndButtons';
+import CustomSnackbar from './CustomSnackbar';
 import { Typography } from '@mui/material';
 import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
@@ -53,7 +54,7 @@ export default function TabsCustom() {
         </StyledTypography>
         <TextFields title="نام کاربری" margin="20px" />
         <TextFields title="رمز عبور" margin="20px" />
-        <EndButtons title="وارد شوید" margin="20px" />
+        <CustomSnackbar />
       </TabPanel>
       <TabPanel value="2">
         <StyledTypography>
