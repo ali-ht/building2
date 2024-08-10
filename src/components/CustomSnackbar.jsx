@@ -17,6 +17,36 @@ const StyledButton = styled(Button)(({ theme }) => ({
   }
 }));
 
+const StyledIconButton = styled(IconButton)(({ theme }) => ({
+  backgroundColor: "#7f2200", 
+  borderRadius: '12px 0px 0px 12px', 
+  height: '52px',
+  position: 'absolute',
+  marginRight: '67px',
+  ":hover": {
+    backgroundColor: "#e60101"
+  }
+}));
+
+const StyledSnackbar = styled(Snackbar)(({ theme }) => ({
+  position: 'flex',
+  textAlign: 'right',
+  width: '80%',
+  marginLeft: '22px',
+  marginBottom: '50px',
+  '& .MuiSvgIcon-root': {
+    position: 'relative',
+    fontSize: '35px', 
+  },
+  '& .MuiPaper-root': {
+    backgroundColor: '#e60101',
+    position: 'relative',
+    borderRadius: '12px',
+    fontFamily: 'font1',
+    height: '40px',
+  },
+}));
+
 export default function CustomSnackbar() {
   const [open, setOpen] = React.useState(false);
 
@@ -38,52 +68,25 @@ export default function CustomSnackbar() {
 
   const action = (
     <React.Fragment>
-      <IconButton
+      <StyledIconButton
         size="small"
         aria-label="close"
         color="inherit"
-        onClick={handleClose}
-        sx = {{
-          backgroundColor: "#7f2200", 
-          borderRadius: '12px 0px 0px 12px', 
-          height: '52px',
-          position: 'absolute',
-          marginRight: '67px',
-          ":hover": {
-          backgroundColor: "#e60101"
-          }
-        }}>
+        onClick={handleClose}>
         <CloseIcon fontSize="small" />
-      </IconButton>
+      </StyledIconButton>
     </React.Fragment>
   );
 
   return (
     <div>
-      <StyledButton onClick = {handleClick}>وارد شوید</StyledButton>
-      <Snackbar
-        // anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+      <StyledButton onClick={handleClick}>وارد شوید</StyledButton>
+      <StyledSnackbar
         open={open}
         autoHideDuration={10000}
         onClose={handleClose}
         message="نام کاربری و یا رمز عبور اشتباه است"
         action={action}
-        sx={{
-          position: "absolute",
-          textAlign: 'right',
-          '& .css-ptiqhd-MuiSvgIcon-root': {
-            position: 'relative',
-            top: '0px',
-            fontSize: '35px', 
-          },
-          '& .css-1eqdgzv-MuiPaper-root-MuiSnackbarContent-root': {
-            backgroundColor: '#e60101',
-            position: 'relative',
-            borderRadius: '12px',
-            fontFamily: 'font1',
-            height: '40px',
-          },
-        }}
       />
     </div>
   );
