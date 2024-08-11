@@ -1,5 +1,5 @@
 import * as React from 'react';
-import TextFields from './textFild';
+import TextFields from './TextFields';
 import EndButtons from './EndButtons';
 import CustomSnackbar from './CustomSnackbar';
 import { Typography } from '@mui/material';
@@ -35,7 +35,7 @@ const StyledTypography = styled(Typography)(({ theme }) => ({
   color: 'black',
 }));
 
-export default function TabsCustom() {
+export default function TabCustom() {
   const [value, setValue] = React.useState('1');
 
   const handleChange = (event, newValue) => {

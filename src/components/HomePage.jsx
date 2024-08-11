@@ -1,7 +1,7 @@
 import BuildingTasks from './BuildingTasks';
 import PersistentDrawerRight from './UserBar';
 
-function HomePage() {
+export default function HomePage() {
 
 
   return (
@@ -11,5 +11,3 @@ function HomePage() {
     </div>
   )
 }
-
-export default HomePage

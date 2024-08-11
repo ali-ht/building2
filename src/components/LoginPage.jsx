@@ -1,5 +1,5 @@
 import * as React from 'react';
-import TabsCustom from './Tab.jsx';
+import TabCustom from './TabCustom.jsx';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import { Typography } from '@mui/material';
@@ -35,7 +35,7 @@ export default function LoginPage() {
             <Typography sx={{margin:'30px 0px 25px 0px', fontFamily:'font1' , fontSize:29 , color:'black'}}>
                 به ساختمان خوش آمدید !
             </Typography>
-            <TabsCustom />
+            <TabCustom />
         </Paper>
     </Box>
   );
