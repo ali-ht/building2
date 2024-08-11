@@ -1,6 +1,5 @@
 import * as React from 'react';
 import TextFields from './TextFields';
-import EndButtons from './EndButtons';
 import CustomSnackbar from './CustomSnackbar';
 import { Typography } from '@mui/material';
 import Tab from '@mui/material/Tab';
@@ -53,8 +52,8 @@ export default function TabCustom() {
           لطفا اطلاعات زیر را پر کنید .
         </StyledTypography>
         <TextFields title="نام کاربری" margin="20px" />
-        <TextFields title="رمز عبور" margin="20px" />
-        <CustomSnackbar />
+        <TextFields title="رمز عبور" margin="40px" />
+        <CustomSnackbar title="وارد شوید" message="نام کاربری و یا رمز عبور اشتباه است" errorMessage={true}/>
       </TabPanel>
       <TabPanel value="2">
         <StyledTypography>
@@ -64,8 +63,8 @@ export default function TabCustom() {
         <TextFields title="نام خانوادگی" margin="0px" />
         <TextFields title="نام کاربری" margin="0px" />
         <TextFields title="رمز عبور" margin="0px" />
-        <TextFields title="تکرار رمز عبور" margin="0px" />
-        <EndButtons title="ثبت نام" margin="0px" />
+        <TextFields title="تکرار رمز عبور" margin="20px" />
+        <CustomSnackbar title="ثبت نام" message="تکرار رمز عبور اشتباه می‌باشد" errorMessage={true}/>
       </TabPanel>
     </TabContext>
   );

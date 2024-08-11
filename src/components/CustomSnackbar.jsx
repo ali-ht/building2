@@ -47,12 +47,17 @@ const StyledSnackbar = styled(Snackbar)(({ theme }) => ({
   },
 }));
 
-export default function CustomSnackbar() {
+export default function CustomSnackbar({title, message, errorMessage}) {
   const [open, setOpen] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(false)
 
-  var err = true;
+  var err = errorMessage;
 
   const handleClick = () => {
+    setIsLoading(true)
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 2000)
     if (err) {
       setOpen(true);
     }
@@ -80,12 +85,12 @@ export default function CustomSnackbar() {
 
   return (
     <div>
-      <StyledButton onClick={handleClick}>وارد شوید</StyledButton>
+      <StyledButton onClick={handleClick} disabled={isLoading}>{title}</StyledButton>
       <StyledSnackbar
         open={open}
         autoHideDuration={10000}
         onClose={handleClose}
-        message="نام کاربری و یا رمز عبور اشتباه است"
+        message={message}
         action={action}
       />
     </div>
