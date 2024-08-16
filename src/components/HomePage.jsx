@@ -1,12 +1,14 @@
 import BuildingTasks from './BuildingTasks';
-import PersistentDrawerRight from './UserBar';
+import Sidebar from './sidebar';
+
 
 function HomePage() {
 
 
   return (
     <div style={{display:'flex' , columnGap:'28px',height:'calc(100% - 56px)' , padding:'28px'}}>
-      <PersistentDrawerRight />
+      {/* <PersistentDrawerRight /> */}
+      <Sidebar/>
       <BuildingTasks />
     </div>
   )
