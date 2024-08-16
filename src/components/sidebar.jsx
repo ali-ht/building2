@@ -17,7 +17,7 @@ const Sidebar = () => {
 
     return (
             <Paper sx={{
-                width: isOpen ? '280px' : '70px',
+                width: isOpen ? '361px' : '92px',
                 height: '100%',
                 backgroundColor: 'white',
                 borderRadius: '12px',
