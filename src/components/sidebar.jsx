@@ -6,6 +6,7 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import { Typography, Box } from '@mui/material';
 import Person2RoundedIcon from '@mui/icons-material/Person2Rounded';
 import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
+import BuildingTreeView from './TreeView/BuildingTreeView';
 
 const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -52,12 +53,7 @@ const Sidebar = () => {
                     </IconButton>
                     {isOpen && <Typography sx={{fontFamily:'IRANYekanWeb' , fontSize:'14px'}}>کار های شما</Typography>}
                 </Box>
-
-                {/* <Box
-                sx={{marginLeft:'-30px',marginTop:'10px'}}
-                >
-                    {isOpen && <Box><Typography>tree</Typography></Box>}
-                </Box>  */}
+                    {isOpen && <Box><BuildingTreeView/></Box>}
             </Paper>
     );
 };

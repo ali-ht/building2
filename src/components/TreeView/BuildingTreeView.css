@@ -1,0 +1,12 @@
+.TreeBox {
+  background-color: white;
+  height: calc(100% - 32px);
+  width: 100%;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin-right: -18px;
+}
+
+.css-53rj3a-MuiTreeItem-content .MuiTreeItem-label{
+  font-family: 'IRANYekanWeb', sans-serif !important;
+}

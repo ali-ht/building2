@@ -1,15 +1,9 @@
-import HomePage from './components/HomePage';
-import LoginPage from './components/LoginPage';
-import WorkCreationPage from './components/WorkCreationPage';
+import HomePage from "./components/HomePage"
 
 function App() {
 
   return (
-      <div>
-        {/* <HomePage /> */}
-        {/* <LoginPage /> */}
-        <WorkCreationPage />
-      </div>
+    <HomePage/>
   )
 }
 
