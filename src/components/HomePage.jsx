@@ -2,7 +2,7 @@ import BuildingTasks from './BuildingTasks';
 import Sidebar from './sidebar';
 
 
-function HomePage() {
+export default function HomePage() {
 
 
   return (
@@ -13,5 +13,3 @@ function HomePage() {
     </div>
   )
 }
-
-export default HomePage
