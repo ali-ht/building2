@@ -4,6 +4,7 @@ import Snackbar from '@mui/material/Snackbar';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import { styled } from '@mui/system';
+import { useNavigate } from 'react-router-dom';
 
 const StyledButton = styled(Button)(({ theme }) => ({
   backgroundColor: "#FF4500",
@@ -47,19 +48,24 @@ const StyledSnackbar = styled(Snackbar)(({ theme }) => ({
   },
 }));
 
-export default function CustomSnackbar({title, message, errorMessage}) {
+export default function CustomSnackbar({title, message, errorMessage, onClickPath}) {
   const [open, setOpen] = React.useState(false);
-  const [isLoading, setIsLoading] = React.useState(false)
+  const [isLoading, setIsLoading] = React.useState(false);
+  
+  const navigate = useNavigate();
 
   var err = errorMessage;
 
   const handleClick = () => {
-    setIsLoading(true)
+    setIsLoading(true);
     setTimeout(() => {
-      setIsLoading(false)
-    }, 2000)
+      setIsLoading(false);
+    }, 2000);
+
     if (err) {
       setOpen(true);
+    } else {
+      navigate(onClickPath);
     }
   };
 
