@@ -21,7 +21,7 @@ export default function LoginPage() {
             height: "100%",
             },
             '& .MuiFormLabel-root':{
-                fontFamily:'font1',
+                fontFamily:'IRANYekanWeb',
             },
             '& fieldset':{border:'none'},
             "& label": {
@@ -32,7 +32,7 @@ export default function LoginPage() {
         }}
     >
         <Paper elevation={3} sx={{borderRadius: 5}}>
-            <Typography sx={{margin:'30px 0px 25px 0px', fontFamily:'font1' , fontSize:29 , color:'black'}}>
+            <Typography sx={{margin:'30px 0px 25px 0px', fontFamily:'IRANYekanWeb' , fontSize:29 , color:'black'}}>
                 به ساختمان خوش آمدید !
             </Typography>
             <TabCustom />

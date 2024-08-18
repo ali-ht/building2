@@ -11,7 +11,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
   width: "88%",
   height: "40px",
   borderRadius: "8px",
-  fontFamily: "font1",
+  fontFamily: "IRANYekanWeb",
   ":hover": {
     backgroundColor: "#FF8C00"
   }
@@ -42,7 +42,7 @@ const StyledSnackbar = styled(Snackbar)(({ theme }) => ({
     backgroundColor: '#e60101',
     position: 'relative',
     borderRadius: '12px',
-    fontFamily: 'font1',
+    fontFamily: 'IRANYekanWeb',
     height: '40px',
   },
 }));

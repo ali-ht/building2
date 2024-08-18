@@ -9,7 +9,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
   height: "40px",
   marginTop: "25px",
   borderRadius: "8px",
-  fontFamily: "font1",
+  fontFamily: "IRANYekanWeb",
   ":hover": {
     backgroundColor: "#FF8C00"
   }

@@ -39,7 +39,7 @@ export default function WorkCreationPage() {
             height: "100%",
             },
             '& .MuiFormLabel-root':{
-                fontFamily:'font1',
+                fontFamily:'IRANYekanWeb',
             },
             '& fieldset':{border:'none'},
             "& label": {
@@ -50,7 +50,7 @@ export default function WorkCreationPage() {
         }}
     >
         <Paper elevation={3} sx={{borderRadius: 5}}>
-            <Typography sx={{margin:'30px 0px 10px 0px', fontFamily:'font1' , fontSize:29 , color:'black'}}>
+            <Typography sx={{margin:'30px 0px 10px 0px', fontFamily:'IRANYekanWeb' , fontSize:29 , color:'black'}}>
                 ایجاد کار جدید
             </Typography>
             <TextFields title = "عنوان کار"/>

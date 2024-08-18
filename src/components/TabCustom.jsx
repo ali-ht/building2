@@ -12,14 +12,14 @@ const StyledTabList = styled(TabList)(({ theme }) => ({
   '& > :not(style)': {
     marginRight: theme.spacing(5),
   },
-  '.css-1euq74i-MuiButtonBase-root-MuiTab-root.Mui-selected': {
+  '.css-m116zo-MuiButtonBase-root-MuiTab-root.Mui-selected': {
     color: 'white',
     backgroundColor: '#FF4500',
   }
 }));
 
 const StyledTab = styled(Tab)(({ theme }) => ({
-  fontFamily: 'font1',
+  fontFamily: 'IRANYekanWeb',
   borderRadius: '40px',
   backgroundColor: '#F5F5F5',
   width: '150px',
@@ -29,7 +29,7 @@ const StyledTab = styled(Tab)(({ theme }) => ({
 
 const StyledTypography = styled(Typography)(({ theme }) => ({
   margin: '0px 25px 7px 10px',
-  fontFamily: 'font1',
+  fontFamily: 'IRANYekanWeb',
   fontSize: 17,
   color: 'black',
 }));

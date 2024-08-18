@@ -78,7 +78,7 @@ export default function SelectInputs({title, menuitems}) {
               key={name}
               value={name}
               style={getStyles(name, personName, theme)}
-              sx={{fontFamily:'font1'}}
+              sx={{fontFamily:'IRANYekanWeb'}}
             >
               {name}
             </MenuItem>
