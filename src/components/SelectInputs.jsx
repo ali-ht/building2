@@ -46,7 +46,7 @@ export default function SelectInputs({title, menuitems}) {
     <div>
       <FormControl sx={{ 
             m: 1,
-            // marginBottom: props.margin,
+            marginBottom: '0px',
             width: '300px', 
             height: '100%', 
             direction: 'rtl', 

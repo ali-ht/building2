@@ -50,10 +50,10 @@ export default function WorkCreationPage() {
         }}
     >
         <Paper elevation={3} sx={{borderRadius: 5}}>
-            <Typography sx={{margin:'30px 0px 10px 0px', fontFamily:'IRANYekanWeb' , fontSize:29 , color:'black'}}>
+            <Typography sx={{margin:'10px 0px 0px 0px', fontFamily:'IRANYekanWeb' , fontSize:29 , color:'black'}}>
                 ایجاد کار جدید
             </Typography>
-            <TextFields title = "عنوان کار"/>
+            <TextFields title = "عنوان کار" margin= '0px'/>
             <SelectInputs title = "انتخاب پروژه" menuitems = {projects}/>
             <SelectInputs title = "انتخاب طبقه" menuitems = {floors}/>
             <TextFieldsLarge title = "شرح مختصر کار"/>

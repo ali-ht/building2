@@ -10,17 +10,16 @@ export default function TextFieldsLarge(props) {
       sx={{
         '& > :not(style)': { 
             m: 1,
-            marginBottom: props.margin,
-            minHeight: '120px',
+            marginBottom: '0px',
             width: '300px', 
-            height: '100%', 
+            height: '100px', 
             direction: 'rtl', 
             backgroundColor: backColor,
             borderRadius: '30px',
         },
       }}
     >
-      <TextField label = {props.title} multiline sx={{direction: 'rtl', borderRadius: '40px'}}/>
+      <TextField label = {props.title} multiline rows={3} sx={{direction: 'rtl', borderRadius: '40px'}}/>
     </Box>
   );
 }
