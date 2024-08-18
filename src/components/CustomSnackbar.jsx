@@ -19,8 +19,8 @@ const StyledButton = styled(Button)(({ theme }) => ({
 }));
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
-  backgroundColor: "#7f2200", 
-  borderRadius: '12px 0px 0px 12px', 
+  backgroundColor: "#7f2200",
+  borderRadius: '12px 0px 0px 12px',
   height: '52px',
   position: 'absolute',
   marginRight: '67px',
@@ -37,7 +37,7 @@ const StyledSnackbar = styled(Snackbar)(({ theme }) => ({
   marginBottom: '50px',
   '& .MuiSvgIcon-root': {
     position: 'relative',
-    fontSize: '35px', 
+    fontSize: '35px',
   },
   '& .MuiPaper-root': {
     backgroundColor: '#e60101',
@@ -48,10 +48,10 @@ const StyledSnackbar = styled(Snackbar)(({ theme }) => ({
   },
 }));
 
-export default function CustomSnackbar({title, message, errorMessage, onClickPath}) {
+export default function CustomSnackbar({ title, message, errorMessage, onClickPath }) {
   const [open, setOpen] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(false);
-  
+
   const navigate = useNavigate();
 
   var err = errorMessage;

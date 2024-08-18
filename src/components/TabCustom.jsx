@@ -53,7 +53,7 @@ export default function TabCustom() {
         </StyledTypography>
         <TextFields title="نام کاربری" margin="20px" />
         <TextFields title="رمز عبور" margin="40px" />
-        <CustomSnackbar title="وارد شوید" message="نام کاربری و یا رمز عبور اشتباه است" errorMessage={true}/>
+        <CustomSnackbar title="وارد شوید" message="نام کاربری و یا رمز عبور اشتباه است" errorMessage={true} onClickPath={'/'} />
       </TabPanel>
       <TabPanel value="2">
         <StyledTypography>
@@ -64,7 +64,7 @@ export default function TabCustom() {
         <TextFields title="نام کاربری" margin="0px" />
         <TextFields title="رمز عبور" margin="0px" />
         <TextFields title="تکرار رمز عبور" margin="20px" />
-        <CustomSnackbar title="ثبت نام" message="تکرار رمز عبور اشتباه می‌باشد" errorMessage={true}/>
+        <CustomSnackbar title="ثبت نام" message="تکرار رمز عبور اشتباه می‌باشد" errorMessage={true} onClickPath={'/'} />
       </TabPanel>
     </TabContext>
   );
