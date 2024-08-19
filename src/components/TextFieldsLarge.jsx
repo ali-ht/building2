@@ -1,6 +1,5 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 
 const backColor = "#F5F5F5";
 
@@ -10,7 +9,7 @@ export default function TextFieldsLarge(props) {
       sx={{
         "& > :not(style)": {
           m: 1,
-          marginBottom: "0px",
+          marginBottom: props.marginB,
           width: "300px",
           height: "100px",
           direction: "rtl",

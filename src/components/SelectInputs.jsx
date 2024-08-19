@@ -47,7 +47,7 @@ export default function SelectInputs({title, menuitems}) {
       <FormControl
         sx={{
           m: 1,
-          marginBottom: "0px",
+          marginBottom: "-2px",
           width: "300px",
           height: "100%",
           direction: "rtl",
