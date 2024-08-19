@@ -19,13 +19,37 @@ const ProjectSelection = () => {
         transform: 'translate(-50%, -50%)',
       }}
     >
-      <Paper elevation={3} sx={{ borderRadius: 5, padding: '20px 30px'  , width:'380px' , height:'420px' , flex:'1' , overflowY:'auto'}}>
-        <Typography>انتخاب پروژه</Typography>
-        <div style={{height:'calc(100% - 60px)'}}>
-        <BuildingTreeView />
-        <div style={{position:'sticky' , bottom:'0px'}}>
-        <DialogButton title='انتخاب' bottomm='0px'/>
+      <Paper
+        elevation={3}
+        sx={{
+          borderRadius: 5,
+          padding: '20px 30px',
+          width: '380px',
+          height: '420px',
+          display: 'flex',
+          flexDirection: 'column',
+          overflow: 'hidden',
+        }}
+      >
+        <Typography sx={{ margin: '30px 0px 25px 0px', fontFamily: 'IRANYekanWeb', fontSize: 29, color: 'black' }}>
+          انتخاب پروژه</Typography>
+        <div style={{
+          flex: 1,
+          overflowY: 'scroll',
+          scrollbarWidth: 'none',
+          msOverflowStyle: 'none',
+        }}>
+          <BuildingTreeView />
+          <style>
+            {`
+              div::-webkit-scrollbar {
+                display: none;
+              }
+            `}
+          </style>
         </div>
+        <div style={{ marginTop: 'auto' , marginBottom: '30px'}}>
+          <DialogButton title='انتخاب' />
         </div>
       </Paper>
     </Box>
