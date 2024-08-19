@@ -1,14 +1,11 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
-import DialogTitle from '@mui/material/DialogTitle';
-import DialogContent from '@mui/material/DialogContent';
-import DialogActions from '@mui/material/DialogActions';
 import ModeEditIcon from '@mui/icons-material/ModeEdit';
-import CloseIcon from '@mui/icons-material/Close';
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
+import DialogButton from './DialogButton'
 
 
 export default function Task({task , onDelete}) {
@@ -24,8 +21,8 @@ export default function Task({task , onDelete}) {
             {
             borderRadius:'12px',
             backgroundColor:'#FFFFFF',
-            width:'305px',
-            height:'359px',
+            width:'300px',
+            height:'300px',
             padding:'8px',
             position:'relative',
             },
@@ -34,28 +31,23 @@ export default function Task({task , onDelete}) {
         aria-labelledby="customized-dialog-title"
         open={open}
       >
+        <div style={{padding:'14px' , display:'grid' , gap:'13px' , height:'100%'}}>
+          <div style={{display: "flex" , alignItems:'center' , justifyContent:'space-between'}}>
+              <CloseRoundedIcon onClick={() => {setOpen(false);}} sx={{fontSize:'29px'}}/>
+              <div style={{display:'flex' , columnGap:'10px',alignItems:'center'}}>
+              <ModeEditIcon sx={{color:'#F15F2B'}}/>
+              <DeleteIcon sx={{color:'#F15F2B'}} onClick={() => onDelete(task.id)}/>
+              </div>
+          </div>
 
-        <div style={{display: "flex" , alignItems:'center' , justifyContent:'space-between'}}>
-            <CloseIcon onClick={() => {setOpen(false);}}/>
-            <div style={{display:'flex' , columnGap:'10px',alignItems:'center'}}>
-            <ModeEditIcon sx={{color:'#F15F2B'}}/>
-            <DeleteIcon sx={{color:'#F15F2B'}} onClick={() => onDelete(task.id)}/>
-            </div>
-        </div>
-
-        <DialogTitle sx={{textAlign:'center'}} id="customized-dialog-title">
-            {task.title}
-        </DialogTitle>
-        <DialogContent dividers >
-          <Typography gutterBottom>
-            {task.description}
+          <Typography sx={{textAlign:'center' , fontFamily:'IRANYekanWeb' , fontSize:'20px'}}>
+              {task.title}
           </Typography>
-        </DialogContent>
-        <DialogActions>
-          <Button autoFocus onClick={() => {setOpen(false);}}>
-            Save changes
-          </Button>
-        </DialogActions>
+          <Typography sx={{fontFamily:'IRANYekanWeb'}}>
+              {task.description}
+          </Typography>
+          <DialogButton title='مشاهده کامل کار'/>
+        </div>
       </Dialog>
     </React.Fragment>
   );
