@@ -158,7 +158,7 @@ const CreateProjectPage = () => {
             </Typography>
           </>
         )}
-        <Box sx={{ display: 'flex', justifyContent: 'center', gap: '10px', marginTop: '20px' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', gap: '10px', margin: '20px 0' }}>
           <RectButton variant="contained" sx={{
             backgroundColor: '#FF7043',
             color: '#fff',
