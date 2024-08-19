@@ -12,13 +12,17 @@ import { styled } from '@mui/material/styles';
 const OvalButton = styled(Button)(({ theme }) => ({
   borderColor: "#FF7043",
   color: "#FF7043",
-  margin: '10px 0',
+  margin: '20px 0',
   borderRadius: '50px',
   width: '90%',
   padding: '10px 0',
   fontFamily: 'IRANYekanWeb',
   fontSize: '16px',
   textTransform: 'none',
+  '&:hover': {
+    borderColor: '#FF7043',
+    backgroundColor: '#F5F5F5'
+  }
 }));
 
 const RectButton = styled(Button)(({ theme }) => ({
@@ -44,7 +48,7 @@ const StyledSwitch = styled((props) => (
       transform: 'translateX(24px)',
       color: '#fff',
       '& + .MuiSwitch-track': {
-        backgroundColor: theme.palette.mode === 'dark' ? '#FF7043' : '#FF7043',
+        backgroundColor: '#FF7043',
         opacity: 1,
         border: 0,
       },
@@ -73,7 +77,7 @@ const StyledSwitch = styled((props) => (
   },
   '& .MuiSwitch-track': {
     borderRadius: 22 / 2,
-    backgroundColor: theme.palette.mode === 'light' ? '#E9E9E9' : '#E9E9EA',
+    backgroundColor: '#9e9e9e',
     opacity: 1,
     transition: theme.transitions.create(['background-color'], {
       duration: 500,
@@ -82,7 +86,7 @@ const StyledSwitch = styled((props) => (
 }));
 
 const CreateProjectPage = () => {
-  const [isSubProject, setIsSubProject] = React.useState(true);
+  const [isSubProject, setIsSubProject] = React.useState(false);
   const [selectedProject, setSelectedProject] = React.useState('بعثت تا ظهور > موسیقی');
 
   const handleSwitchChange = (event) => {
@@ -122,32 +126,34 @@ const CreateProjectPage = () => {
         <Typography sx={{ margin: '30px 0px 25px 0px', fontFamily: 'IRANYekanWeb', fontSize: 29, color: 'black' }}>
           ایجاد پروژه‌ی جدید
         </Typography>
-        <TextFields title="عنوان پروژه" margin="20px" sx={{ width: '400px' }} />
-        <FormGroup sx={{ marginTop: '20px' }}>
+        <TextFields title="عنوان پروژه" margin="20px" width="90%" />
+        <FormGroup sx={{}}>
           <FormControlLabel
-            required
             control={<StyledSwitch checked={isSubProject} onChange={handleSwitchChange} />}
             label={
-              <Typography sx={{ fontFamily: 'IRANYekanWeb', fontSize: 14, textAlign: 'right' }}>
+              <Typography sx={{ fontFamily: 'IRANYekanWeb', fontSize: 14, textAlign: 'right', width:'200px' }}>
                 آیا این پروژه زیر مجموعه‌ی پروژه‌ی دیگری هست؟
               </Typography>
             }
             sx={{
+              marginRight:'0',
               justifyContent: 'center',
               display: 'flex',
               alignItems: 'center',
               width: '90%',
-              gap: '10px',
+              gap: '85px',
               flexDirection: 'row-reverse',
             }}
           />
         </FormGroup>
-        {isSubProject && (
+        {
+        // isSubProject && 
+        (
           <>
-            <OvalButton variant="outlined" onClick={() => { /* Handle change project */ }}>
+            <OvalButton variant="outlined" onClick={() => {}}>
               تغییر پروژه
             </OvalButton>
-            <Typography sx={{ fontFamily: 'IRANYekanWeb', fontSize: 16, color: '#9E9E9E', margin: '10px 0' }}>
+            <Typography sx={{ fontFamily: 'IRANYekanWeb', fontSize: 14, color: '#9E9E9E', margin: '0px 0' }}>
               پروژه انتخاب شده: {selectedProject}
             </Typography>
           </>
