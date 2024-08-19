@@ -1,7 +1,6 @@
-import * as React from 'react';
-import TextFields from './TextFields';
-import SelectInputs from './SelectInputs';
-import TextFieldsLarge from './TextFieldsLarge';
+import TextFields from "./TextFields";
+import SelectInputs from "./SelectInputs";
+import TextFieldsLarge from "./TextFieldsLarge";
 import EndButtons from "./EndButtons";
 import FileUploadInputs from "./FileUploadInputs";
 import Box from "@mui/material/Box";
@@ -50,19 +49,19 @@ export default function WorkCreationPage() {
       <Paper elevation={3} sx={{ borderRadius: 5 }}>
         <Typography
           sx={{
-            margin: "10px 0px 0px 0px",
+            margin: "7px 0px 0px 0px",
             fontFamily: "IRANYekanWeb",
-            fontSize: 29,
+            fontSize: 25,
             color: "black",
           }}
         >
           ایجاد کار جدید
         </Typography>
-        <TextFields title="عنوان کار" margin="0px" />
+        <TextFields title="عنوان کار" margin="-2px" />
         <SelectInputs title="انتخاب پروژه" menuitems={projects} />
         <SelectInputs title="انتخاب طبقه" menuitems={floors} />
-        <TextFieldsLarge title="شرح مختصر کار" />
-        <TextFieldsLarge title="شرح پیش نیاز" />
+        <TextFieldsLarge title="شرح مختصر کار" marginB = "-2px"/>
+        <TextFieldsLarge title="شرح پیش نیاز" marginB = "0px"/>
         <FileUploadInputs title="تصویر شاخص کار" />
         <FileUploadInputs title="فایل پیوست" />
         <EndButtons title="ایجاد" marginL="5px" />

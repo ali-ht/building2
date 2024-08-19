@@ -21,7 +21,7 @@ export default function FileUploadInputs({ title }) {
         display: "inline-block",
         width: "300px",
         position: "relative",
-        marginTop: "10px",
+        marginTop: "5px",
       }}
     >
       <Button
