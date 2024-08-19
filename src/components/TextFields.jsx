@@ -4,13 +4,14 @@ import TextField from "@mui/material/TextField";
 const backColor = "#F5F5F5";
 
 export default function TextFields(props) {
+  const width = props.width || "300px";
   return (
     <Box
       sx={{
         "& > :not(style)": {
           m: 1,
           marginBottom: props.margin,
-          width: "300px",
+          width: width,
           height: "50px",
           direction: "rtl",
           backgroundColor: backColor,
