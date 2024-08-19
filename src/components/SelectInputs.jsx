@@ -44,30 +44,36 @@ export default function SelectInputs({title, menuitems}) {
   
   return (
     <div>
-      <FormControl sx={{ 
-            m: 1,
-            marginBottom: '0px',
-            width: '300px', 
-            height: '100%', 
-            direction: 'rtl', 
-            backgroundColor: "#F5F5F5",
-            borderRadius: '40px',
-        }}>
+      <FormControl
+        sx={{
+          m: 1,
+          marginBottom: "0px",
+          width: "300px",
+          height: "100%",
+          direction: "rtl",
+          backgroundColor: "#F5F5F5",
+          borderRadius: "40px",
+        }}
+      >
         <InputLabel>{title}</InputLabel>
         <Select
           sx={{
-            '.MuiSelect-icon':{
-                marginX: '260px',
-            }
-          }} 
+            ".MuiSelect-icon": {
+              marginX: "260px",
+            },
+          }}
           multiple
           value={personName}
           onChange={handleChange}
           input={<OutlinedInput id="select-multiple-chip" label="Chip" />}
           renderValue={(selected) => (
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5,}}>
+            <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
               {selected.map((value) => (
-                <Chip key={value} label={value} sx={{ backgroundColor: '#FF4500', color: 'white'}}/>
+                <Chip
+                  key={value}
+                  label={value}
+                  sx={{ backgroundColor: "#FF4500", color: "white" }}
+                />
               ))}
             </Box>
           )}
@@ -78,7 +84,7 @@ export default function SelectInputs({title, menuitems}) {
               key={name}
               value={name}
               style={getStyles(name, personName, theme)}
-              sx={{fontFamily:'IRANYekanWeb'}}
+              sx={{ fontFamily: "IRANYekanWeb" }}
             >
               {name}
             </MenuItem>

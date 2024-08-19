@@ -13,58 +13,58 @@ const StyledButton = styled(Button)(({ theme }) => ({
   borderRadius: "8px",
   fontFamily: "IRANYekanWeb",
   ":hover": {
-    backgroundColor: "#FF8C00"
-  }
+    backgroundColor: "#FF8C00",
+  },
 }));
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
-  backgroundColor: "#7f2200", 
-  borderRadius: '12px 0px 0px 12px', 
-  height: '52px',
-  position: 'absolute',
-  marginRight: '67px',
+  backgroundColor: "#7f2200",
+  borderRadius: "12px 0px 0px 12px",
+  height: "52px",
+  position: "absolute",
+  marginRight: "67px",
   ":hover": {
-    backgroundColor: "#e60101"
-  }
+    backgroundColor: "#e60101",
+  },
 }));
 
 const StyledSnackbar = styled(Snackbar)(({ theme }) => ({
-  position: 'flex',
-  textAlign: 'right',
-  width: '80%',
-  marginLeft: '22px',
-  marginBottom: '50px',
-  '& .MuiSvgIcon-root': {
-    position: 'relative',
-    fontSize: '35px', 
+  position: "flex",
+  textAlign: "right",
+  width: "80%",
+  marginLeft: "22px",
+  marginBottom: "50px",
+  "& .MuiSvgIcon-root": {
+    position: "relative",
+    fontSize: "35px",
   },
-  '& .MuiPaper-root': {
-    backgroundColor: '#e60101',
-    position: 'relative',
-    borderRadius: '12px',
-    fontFamily: 'IRANYekanWeb',
-    height: '40px',
+  "& .MuiPaper-root": {
+    backgroundColor: "#e60101",
+    position: "relative",
+    borderRadius: "12px",
+    fontFamily: "IRANYekanWeb",
+    height: "40px",
   },
 }));
 
-export default function CustomSnackbar({title, message, errorMessage}) {
+export default function CustomSnackbar({ title, message, errorMessage }) {
   const [open, setOpen] = React.useState(false);
-  const [isLoading, setIsLoading] = React.useState(false)
+  const [isLoading, setIsLoading] = React.useState(false);
 
   var err = errorMessage;
 
   const handleClick = () => {
-    setIsLoading(true)
+    setIsLoading(true);
     setTimeout(() => {
-      setIsLoading(false)
-    }, 2000)
+      setIsLoading(false);
+    }, 2000);
     if (err) {
       setOpen(true);
     }
   };
 
   const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
+    if (reason === "clickaway") {
       return;
     }
 
@@ -77,7 +77,8 @@ export default function CustomSnackbar({title, message, errorMessage}) {
         size="small"
         aria-label="close"
         color="inherit"
-        onClick={handleClose}>
+        onClick={handleClose}
+      >
         <CloseIcon fontSize="small" />
       </StyledIconButton>
     </React.Fragment>
@@ -85,7 +86,9 @@ export default function CustomSnackbar({title, message, errorMessage}) {
 
   return (
     <div>
-      <StyledButton onClick={handleClick} disabled={isLoading}>{title}</StyledButton>
+      <StyledButton onClick={handleClick} disabled={isLoading}>
+        {title}
+      </StyledButton>
       <StyledSnackbar
         open={open}
         autoHideDuration={10000}
