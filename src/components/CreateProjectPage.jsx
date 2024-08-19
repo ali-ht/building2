@@ -86,7 +86,7 @@ const StyledSwitch = styled((props) => (
 }));
 
 const CreateProjectPage = () => {
-  const [isSubProject, setIsSubProject] = React.useState(true);
+  const [isSubProject, setIsSubProject] = React.useState(false);
   const [selectedProject, setSelectedProject] = React.useState('بعثت تا ظهور > موسیقی');
 
   const handleSwitchChange = (event) => {
@@ -126,27 +126,29 @@ const CreateProjectPage = () => {
         <Typography sx={{ margin: '30px 0px 25px 0px', fontFamily: 'IRANYekanWeb', fontSize: 29, color: 'black' }}>
           ایجاد پروژه‌ی جدید
         </Typography>
-        <TextFields title="عنوان پروژه" margin="20px" sx={{ width: '400px' }} />
-        <FormGroup sx={{ marginTop: '20px' }}>
+        <TextFields title="عنوان پروژه" margin="20px" width="90%" />
+        <FormGroup sx={{}}>
           <FormControlLabel
-            required
             control={<StyledSwitch checked={isSubProject} onChange={handleSwitchChange} />}
             label={
-              <Typography sx={{ fontFamily: 'IRANYekanWeb', fontSize: 14, textAlign: 'right' }}>
+              <Typography sx={{ fontFamily: 'IRANYekanWeb', fontSize: 14, textAlign: 'right', width:'200px' }}>
                 آیا این پروژه زیر مجموعه‌ی پروژه‌ی دیگری هست؟
               </Typography>
             }
             sx={{
+              marginRight:'0',
               justifyContent: 'center',
               display: 'flex',
               alignItems: 'center',
               width: '90%',
-              gap: '10px',
+              gap: '85px',
               flexDirection: 'row-reverse',
             }}
           />
         </FormGroup>
-        {isSubProject && (
+        {
+        // isSubProject && 
+        (
           <>
             <OvalButton variant="outlined" onClick={() => {}}>
               تغییر پروژه
