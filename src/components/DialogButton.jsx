@@ -10,7 +10,7 @@ const StyledButton = styled(Button)(() => ({
   fontFamily: "IRANYekanWeb",
 }));
 
-export default function DialogButton({ title, bgColor= "#FF4500", marginL="0px", bgColorHover= "#FF8C00", colorText=  "white"}) {
+export default function DialogButton({ title, bgColor= "#FF4500", marginL="0px", bgColorHover= "#FF8C00", colorText=  "white" , bottomm='-23px'}) {
   const [isLoading, setIsLoading] = React.useState(false)
   
   const handleClick = () => {
@@ -23,7 +23,7 @@ export default function DialogButton({ title, bgColor= "#FF4500", marginL="0px",
   return (
     <StyledButton disabled={isLoading} onClick={handleClick} variant="text" sx={{
       fontSize:'18px',
-      bottom:'-23px',
+      bottom:bottomm,
       backgroundColor: bgColor,
       marginLeft: marginL,
       color: colorText,
