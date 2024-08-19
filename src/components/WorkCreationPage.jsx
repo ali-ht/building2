@@ -5,6 +5,7 @@ import TextFieldsLarge from './TextFieldsLarge';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import { Typography } from '@mui/material';
+import EndButtons from './EndButtons';
 
 const floors = [
     'طبقه اول',
@@ -58,6 +59,8 @@ export default function WorkCreationPage() {
             <SelectInputs title = "انتخاب طبقه" menuitems = {floors}/>
             <TextFieldsLarge title = "شرح مختصر کار"/>
             <TextFieldsLarge title = "شرح پیش نیاز"/>
+            <EndButtons title = "ایجاد" marginL = "5px"/>
+            <EndButtons title = "انصراف" bgColor = "#F3F3F3" bgColorHover = "#F5FFFA" colorText= "#9E9E9E"/>
         </Paper>
     </Box>
   );
