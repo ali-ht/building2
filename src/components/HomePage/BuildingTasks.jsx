@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import TaskList from './TaskList';
-import FloorNumber from './FloorNumber';
+import TaskList from '../TaskList.jsx';
+import FloorNumber from '../FloorNumber.jsx';
 
 
 function BuildingTasks() {

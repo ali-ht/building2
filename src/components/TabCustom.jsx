@@ -1,6 +1,6 @@
 import * as React from 'react';
-import TextFields from './TextFields';
-import CustomSnackbar from './CustomSnackbar';
+import TextFields from './Objects/TextFields.jsx';
+import CustomSnackbar from './Objects/CustomSnackbar.jsx';
 import { Typography } from '@mui/material';
 import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';

@@ -1,5 +1,5 @@
-import BuildingTasks from './BuildingTasks';
-import Sidebar from './sidebar';
+import BuildingTasks from './BuildingTasks.jsx';
+import Sidebar from './sidebar.jsx';
 
 
 export default function HomePage() {

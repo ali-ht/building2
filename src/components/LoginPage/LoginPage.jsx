@@ -1,5 +1,5 @@
 import * as React from 'react';
-import TabCustom from './TabCustom.jsx';
+import TabCustom from '../TabCustom.jsx';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import { Typography } from '@mui/material';

@@ -1,8 +1,8 @@
-import TextFields from "./TextFields";
-import SelectInputs from "./SelectInputs";
-import TextFieldsLarge from "./TextFieldsLarge";
-import EndButtons from "./EndButtons";
-import FileUploadInputs from "./FileUploadInputs";
+import TextFields from "../Objects/TextFields.jsx";
+import SelectInputs from "../Objects/SelectInputs.jsx";
+import TextFieldsLarge from "../Objects/TextFieldsLarge.jsx";
+import EndButtons from "../Objects/EndButtons.jsx";
+import FileUploadInputs from "../Objects/FileUploadInputs.jsx";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import { Typography } from "@mui/material";
@@ -19,7 +19,7 @@ const floors = [
 
 const projects = ["ساختمان", "وپ عبادالله", "معارف"];
 
-export default function WorkCreationPage() {
+export default function TaskCreationPage() {
   return (
     <Box
       sx={{

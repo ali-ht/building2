@@ -6,7 +6,7 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import { Typography, Box } from '@mui/material';
 import Person2RoundedIcon from '@mui/icons-material/Person2Rounded';
 import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
-import BuildingTreeView from './TreeView/BuildingTreeView';
+import BuildingTreeView from '../TreeView/BuildingTreeView.jsx';
 
 const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);

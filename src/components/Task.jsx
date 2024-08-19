@@ -5,7 +5,7 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
-import DialogButton from './DialogButton'
+import DialogButton from './Objects/DialogButton.jsx'
 
 
 export default function Task({task , onDelete}) {

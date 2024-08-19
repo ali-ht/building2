@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import BuildingTreeView from './TreeView/BuildingTreeView';
-import DialogButton from './DialogButton'
+import BuildingTreeView from '../TreeView/BuildingTreeView.jsx';
+import DialogButton from '../Objects/DialogButton.jsx'
 import { Typography } from '@mui/material';
 
 
