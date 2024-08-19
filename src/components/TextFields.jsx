@@ -20,7 +20,10 @@ export default function TextFields(props) {
     >
       <TextField
         label={props.title}
-        sx={{ direction: "rtl", borderRadius: "40px" }}
+        sx={{ direction: "rtl", borderRadius: "40px" ,
+          "& .MuiFormLabel-root":{
+            color:'#9E9E9E'
+          }}}
       />
     </Box>
   );

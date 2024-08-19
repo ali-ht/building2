@@ -55,7 +55,7 @@ export default function SelectInputs({title, menuitems}) {
           borderRadius: "40px",
         }}
       >
-        <InputLabel>{title}</InputLabel>
+        <InputLabel sx={{color:'#9E9E9E'}}>{title}</InputLabel>
         <Select
           sx={{
             ".MuiSelect-icon": {

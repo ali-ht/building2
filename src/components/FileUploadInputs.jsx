@@ -33,6 +33,8 @@ export default function FileUploadInputs({ title }) {
           borderRadius: "40px",
           cursor: "pointer",
           color: "#9E9E9E",
+          display:'flex',
+          justifyContent:'space-between'
         }}
       >
         {title}
@@ -42,5 +44,4 @@ export default function FileUploadInputs({ title }) {
     </Box>
   );
 }
-// marginRight: "130px"
-// position: "absolute",
+

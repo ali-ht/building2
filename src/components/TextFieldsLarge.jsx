@@ -16,13 +16,16 @@ export default function TextFieldsLarge(props) {
           backgroundColor: backColor,
           borderRadius: "30px",
         },
+        "& .MuiFormLabel-root":{
+          color:'#9E9E9E'
+        }
       }}
     >
       <TextField
         label={props.title}
         multiline
         rows={3}
-        sx={{ direction: "rtl", borderRadius: "40px" }}
+        sx={{ direction: "rtl", borderRadius: "40px" ,  color:'#9E9E9E'}}
       />
     </Box>
   );
