@@ -5,7 +5,11 @@ import DialogButton from '../Objects/DialogButton.jsx'
 import { Typography } from '@mui/material';
 
 
-const ProjectSelection = () => {
+const ProjectSelection = ({ selectedProject }) => {
+
+  const setProject = (project) => {
+    selectedProject = project
+  }
 
   return (
     <Box
@@ -39,7 +43,7 @@ const ProjectSelection = () => {
           scrollbarWidth: 'none',
           msOverflowStyle: 'none',
         }}>
-          <BuildingTreeView />
+          <BuildingTreeView selectedProject={setProject} />
           <style>
             {`
               div::-webkit-scrollbar {
@@ -48,7 +52,7 @@ const ProjectSelection = () => {
             `}
           </style>
         </div>
-        <div style={{ marginTop: 'auto' , marginBottom: '30px'}}>
+        <div style={{ marginTop: 'auto', marginBottom: '30px' }}>
           <DialogButton title='انتخاب' />
         </div>
       </Paper>
