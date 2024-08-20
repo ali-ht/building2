@@ -87,13 +87,14 @@ const StyledTreeItem = styled(TreeItem)(({ theme }) => ({
   }
 }))
 
-const renderTreeItems = (node) => {
+const renderTreeItems = (node, handleItemClick) => {
   return (
     <StyledTreeItem
       key={node.id}
       itemId={node.id}
       label={node.title}
       icon={MailIcon}
+      onClick={handleItemClick}
     >
       {node.children && node.children.length > 0 && (
         <>
@@ -104,19 +105,20 @@ const renderTreeItems = (node) => {
   );
 };
 
-const BuildingTreeView = () => {
+const BuildingTreeView = ({ selectedProject }) => {
   const [selectedItemId, setSelectedItemId] = React.useState(null);
   const [parentItemId, setParentItemId] = React.useState(null);
 
   const handleItemClick = (itemId, parentId) => {
     setSelectedItemId(itemId);
     setParentItemId(parentId);
+    selectedProject = [selectedItemId, parentItemId]
   };
 
   return (
     <div className='TreeBox'>
       <SimpleTreeView>
-        {renderTreeItems(data)}
+        {renderTreeItems(data, handleItemClick)}
       </SimpleTreeView>
     </div>
   );
