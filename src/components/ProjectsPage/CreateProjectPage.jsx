@@ -8,6 +8,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
+import ProjectSelection from './ProjectSelection.jsx';
 
 const OvalButton = styled(Button)(({ theme }) => ({
   borderColor: "#FF7043",
@@ -131,12 +132,12 @@ const CreateProjectPage = () => {
           <FormControlLabel
             control={<StyledSwitch checked={isSubProject} onChange={handleSwitchChange} />}
             label={
-              <Typography sx={{ fontFamily: 'IRANYekanWeb', fontSize: 14, textAlign: 'right', width:'200px' }}>
+              <Typography sx={{ fontFamily: 'IRANYekanWeb', fontSize: 14, textAlign: 'right', width: '200px' }}>
                 آیا این پروژه زیر مجموعه‌ی پروژه‌ی دیگری هست؟
               </Typography>
             }
             sx={{
-              marginRight:'0',
+              marginRight: '0',
               justifyContent: 'center',
               display: 'flex',
               alignItems: 'center',
@@ -147,17 +148,23 @@ const CreateProjectPage = () => {
           />
         </FormGroup>
         {
-        // isSubProject && 
-        (
-          <>
-            <OvalButton variant="outlined" onClick={() => {}}>
-              تغییر پروژه
-            </OvalButton>
-            <Typography sx={{ fontFamily: 'IRANYekanWeb', fontSize: 14, color: '#9E9E9E', margin: '0px 0' }}>
-              پروژه انتخاب شده: {selectedProject}
-            </Typography>
-          </>
-        )}
+          // isSubProject && 
+          (
+            <>
+              <OvalButton variant="outlined" onClick={() => {
+                return (
+
+                  <ProjectSelection selectedProject={setSelectedProject}>
+                  </ProjectSelection>
+                )
+              }}>
+                تغییر پروژه
+              </OvalButton>
+              <Typography sx={{ fontFamily: 'IRANYekanWeb', fontSize: 14, color: '#9E9E9E', margin: '0px 0' }}>
+                پروژه انتخاب شده: {selectedProject}
+              </Typography>
+            </>
+          )}
         <Box sx={{ display: 'flex', justifyContent: 'center', gap: '10px', margin: '20px 0' }}>
           <RectButton variant="contained" sx={{
             backgroundColor: '#FF7043',

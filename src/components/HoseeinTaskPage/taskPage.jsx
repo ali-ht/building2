@@ -1,6 +1,6 @@
 import React from "react";
 import TaskDialog from "./taskDialog";
-import TaskTable from "./taskTable";
+// import TaskTable from "./taskTable";
 import TextField from "@mui/material/TextField";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
@@ -104,7 +104,7 @@ export default function TaskPage() {
           <ButtonOutline />
         </div>
 
-        <TaskTable />
+        {/* <TaskTable /> */}
       </Grid>
       <Grid
         dir="rtl"

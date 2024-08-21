@@ -105,7 +105,7 @@ export default function TaskTable() {
   const [open, setOpen] = React.useState(false);
   return (
     <TableContainer sx={{borderStyle:"solid",borderRadius:"12px",borderColor:"customGray.dark"}}>
-      <Table stickyHeader="false"  dir="rtl">
+      <Table stickyHeader={false}  dir="rtl">
         <TableBody>
           {rows.map((row) => (
             <Row key={row.name} row={row} />
