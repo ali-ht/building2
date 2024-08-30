@@ -1,8 +1,6 @@
 
 import * as React from 'react';
-import Dialog from '@mui/material/Dialog';
-import Button from "@mui/material/Button";
-import Grid from "@mui/material/Grid";
+import { Dialog } from '@mui/material';
 export default function TaskDialog({open,handleClose,component}) {
   return (
     <div>
