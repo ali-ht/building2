@@ -25,7 +25,12 @@ const SmaTaskTable = () => {
             <Table aria-label="simple table">
                 <TableBody>
                     {rows.map((row, index) => (
-                        <TableRow key={index}>
+                        <TableRow
+                            key={index}
+                            style={{
+                                backgroundColor: index % 2 === 0 ? "#fff" : "#f0f0f0" // White for even, gray for odd
+                            }}
+                        >
                             {/* First Column - Icon */}
                             <TableCell align="center" style={{ borderBottom: "none" }}>
                                 {row.icon}
@@ -35,7 +40,7 @@ const SmaTaskTable = () => {
                                 <Typography>{row.label}</Typography>
                             </TableCell>
                             {/* Third Column - Value */}
-                            <TableCell align="left" style={{ borderBottom: "none" }}>
+                            <TableCell align="right" style={{ borderBottom: "none" }}>
                                 <Typography>{row.value}</Typography>
                             </TableCell>
                         </TableRow>
