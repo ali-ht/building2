@@ -1,31 +1,32 @@
 import React from "react";
 import { Button } from "@mui/material";
+import SmaTaskTable from "./SmaTaskTable";
 
 const SmaTaskPage = () => {
     const pageStyle = {
         display: "grid",
-        placeItems: "center", 
+        placeItems: "center",
         width: "100vw",
         height: "100vh",
     };
 
     const containerStyle = {
         display: "grid",
-        gridTemplateRows: "1fr auto 2fr auto", 
+        gridTemplateRows: "1fr auto 2fr auto",
         gap: "10px",
         width: "calc(100% - 10%)",
-        maxWidth: "800px", 
+        maxWidth: "800px",
         height: "calc(100% - 10%)",
-        maxHeight: "600px", 
+        maxHeight: "600px",
         backgroundColor: "#fff",
         borderRadius: "20px",
     };
 
     const grayBoxStyle = {
-        backgroundColor: "#ccc", 
+        backgroundColor: "#ccc",
         width: "100%",
         height: "100%",
-        borderTopLeftRadius: "20px", 
+        borderTopLeftRadius: "20px",
         borderTopRightRadius: "20px",
     };
 
@@ -38,8 +39,11 @@ const SmaTaskPage = () => {
 
     const tableStyle = {
         height: "100%",
-        overflowY: "auto", 
+        overflowY: "auto",
+        margin: "0 10px",
         padding: "10px",
+        borderRadius: "2rem",
+        border: "solid 1px gray"
     };
 
     const customButtonStyle = {
@@ -63,7 +67,7 @@ const SmaTaskPage = () => {
                 </div>
 
                 <div style={tableStyle}>
-                    <p>اون جدوله</p>
+                    <SmaTaskTable />
                 </div>
 
                 <div style={customButtonStyle}>
