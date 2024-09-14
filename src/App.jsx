@@ -1,15 +1,10 @@
-// import HomePage from "./components/HomePage/HomePage.jsx"
-// import CreateProjectPage from "./components/ProjectsPage/CreateProjectPage.jsx"
-// import TaskPage from "./components/HoseeinTaskPage/taskPage.jsx"
-import TaskPage from "./components/HoseeinTaskPage/newTaskPage.jsx"
-import ErrorBoundary from "./ErrorBoundary.jsx"
+import SmaTaskPage from "./components/SeyyedTaskPage/SmaTaskPage"
+import BuildingTreeView from "./components/TreeView/BuildingTreeView"
+
 function App() {
 
   return (
-    // <ErrorBoundary>
-
-      <TaskPage />
-    // <HomePage/>
+    <SmaTaskPage />
   )
 }
 
