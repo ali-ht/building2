@@ -28,16 +28,17 @@ const SmaTaskTable = () => {
                         <TableRow
                             key={index}
                             style={{
-                                backgroundColor: index % 2 === 0 ? "#fff" : "#f0f0f0"
+                                backgroundColor: index % 2 === 0 ? "#fff" : "#f0f0f0",
+                                height: "2rem"
                             }}
                         >
-                            <TableCell align="center" style={{ borderBottom: "none" }}>
+                            <TableCell align="center" style={{ borderBottom: "none", padding: "6px" }}>
                                 {row.icon}
                             </TableCell>
-                            <TableCell align="right" style={{ borderBottom: "none" }}>
+                            <TableCell align="right" style={{ borderBottom: "none", padding: "6px" }}>
                                 <Typography>{row.label}</Typography>
                             </TableCell>
-                            <TableCell align="right" style={{ borderBottom: "none" }}>
+                            <TableCell align="right" style={{ borderBottom: "none", padding: "6px" }}>
                                 <Typography>{row.value}</Typography>
                             </TableCell>
                         </TableRow>

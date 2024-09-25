@@ -41,8 +41,8 @@ const SmaTaskPage = () => {
         height: "100%",
         overflowY: "auto",
         margin: "0 10px",
-        padding: "10px",
-        borderRadius: "2rem",
+        padding: "5px",
+        borderRadius: "1rem",
         border: "solid 1px gray"
     };
 
