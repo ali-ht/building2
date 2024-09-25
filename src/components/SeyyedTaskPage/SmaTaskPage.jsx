@@ -36,6 +36,15 @@ const SmaTaskPage = () => {
         alignItems: "center",
         padding: "10px",
     };
+    const memberBarStyle = {
+        backgroundColor: "#FEEFEA",
+        height: "30px",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: "5px",
+        margin: "10px 0",
+    };
 
     const tableStyle = {
         height: "100%",
@@ -45,6 +54,34 @@ const SmaTaskPage = () => {
         borderRadius: "1rem",
         border: "solid 1px gray"
     };
+
+    const dataContainerStyle = {
+        overflowY: "auto"
+    };
+
+    const memberContainer = {
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",
+        columnGap: "1rem",
+        margin: "1rem",
+    };
+    
+    const reportsContainer = {
+        display: "grid",
+        gridTemplateColumns: "1fr 3fr",
+        columnGap: "1rem",
+        margin: "1rem",
+    }
+
+    const memberItem = {
+        backgroundColor: "#F3F3F3",
+        height: "3rem",
+    };
+    
+    const reportItem = {
+        backgroundColor: "#F3F3F3",
+        height: "4rem",
+    }
 
     const customButtonStyle = {
         display: "flex",
@@ -65,9 +102,32 @@ const SmaTaskPage = () => {
                         <Button variant="contained" color="error">حذف</Button>
                     </div>
                 </div>
-
-                <div style={tableStyle}>
-                    <SmaTaskTable />
+                <div style={dataContainerStyle}>
+                    <div style={tableStyle}>
+                        <SmaTaskTable />
+                    </div>
+                    <div>
+                        <div style={memberBarStyle}>
+                            <h4>مسئولین</h4>
+                            <div>
+                                <Button variant="outlined" color="secondary" style={{ marginRight: "10px" }}>ویرایش</Button>
+                            </div>
+                        </div>
+                        <div style={memberContainer}>
+                            <div style={memberItem}>تست</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style={memberBarStyle}>
+                            <h4>گزارش‌ها</h4>
+                            <div>
+                                <Button variant="outlined" color="secondary" style={{ marginRight: "10px" }}>اضافه کردن گزارش</Button>
+                            </div>
+                        </div>
+                        <div style={reportsContainer}>
+                            <div style={reportItem}>تست</div>
+                        </div>
+                    </div>
                 </div>
 
                 <div style={customButtonStyle}>
