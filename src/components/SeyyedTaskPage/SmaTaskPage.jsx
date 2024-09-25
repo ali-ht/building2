@@ -1,6 +1,9 @@
 import React from "react";
 import { Button } from "@mui/material";
 import SmaTaskTable from "./SmaTaskTable";
+import DescriptionIcon from '@mui/icons-material/Description';
+import CreateIcon from '@mui/icons-material/Create';
+import AddIcon from '@mui/icons-material/Add';
 
 const SmaTaskPage = () => {
     const pageStyle = {
@@ -76,11 +79,13 @@ const SmaTaskPage = () => {
     const memberItem = {
         backgroundColor: "#F3F3F3",
         height: "3rem",
+        textAlign: "center",
     };
     
     const reportItem = {
         backgroundColor: "#F3F3F3",
         height: "4rem",
+        textAlign: "center",
     }
 
     const customButtonStyle = {
@@ -110,7 +115,7 @@ const SmaTaskPage = () => {
                         <div style={memberBarStyle}>
                             <h4>مسئولین</h4>
                             <div>
-                                <Button variant="outlined" color="secondary" style={{ marginRight: "10px" }}>ویرایش</Button>
+                                <Button variant="text" color="secondary" style={{ marginRight: "10px" }} startIcon={<CreateIcon />}>ویرایش مسئولین</Button>
                             </div>
                         </div>
                         <div style={memberContainer}>
@@ -121,7 +126,7 @@ const SmaTaskPage = () => {
                         <div style={memberBarStyle}>
                             <h4>گزارش‌ها</h4>
                             <div>
-                                <Button variant="outlined" color="secondary" style={{ marginRight: "10px" }}>اضافه کردن گزارش</Button>
+                                <Button variant="text" color="secondary" style={{ marginRight: "10px" }} startIcon={<AddIcon />}>اضافه کردن گزارش</Button>
                             </div>
                         </div>
                         <div style={reportsContainer}>
