@@ -1,9 +1,9 @@
 import React from "react";
 import { Button } from "@mui/material";
 import SmaTaskTable from "./SmaTaskTable";
-import DescriptionIcon from '@mui/icons-material/Description';
-import CreateIcon from '@mui/icons-material/Create';
-import AddIcon from '@mui/icons-material/Add';
+import MemberSection from "./MemberSection";
+import ReportsSection from "./ReportsSection";
+import ActionButton from "./ActionButton";
 
 // Main Page Component
 const SmaTaskPage = () => {
@@ -43,44 +43,6 @@ const DataContainer = () => (
         </div>
         <MemberSection />
         <ReportsSection />
-    </div>
-);
-
-// Member Section Component
-const MemberSection = () => (
-    <SectionContainer title="مسئولین" buttonLabel="ویرایش مسئولین" buttonIcon={<CreateIcon />}>
-        <div style={styles.memberContainer}>
-            <div style={styles.memberItem}>تست</div>
-        </div>
-    </SectionContainer>
-);
-
-// Reports Section Component
-const ReportsSection = () => (
-    <SectionContainer title="گزارش‌ها" buttonLabel="اضافه کردن گزارش" buttonIcon={<AddIcon />}>
-        <div style={styles.reportsContainer}>
-            <div style={styles.reportItem}>تست</div>
-        </div>
-    </SectionContainer>
-);
-
-// Reusable Section Container Component
-const SectionContainer = ({ title, buttonLabel, buttonIcon, children }) => (
-    <div>
-        <div style={styles.sectionBar}>
-            <h4>{title}</h4>
-            <Button variant="text" color="secondary" style={{ marginRight: "10px" }} startIcon={buttonIcon}>
-                {buttonLabel}
-            </Button>
-        </div>
-        {children}
-    </div>
-);
-
-// Action Button Component
-const ActionButton = () => (
-    <div style={styles.actionButtonContainer}>
-        <Button variant="contained" color="warning" fullWidth>انجام کار</Button>
     </div>
 );
 
@@ -126,43 +88,6 @@ const styles = {
         padding: "5px",
         borderRadius: "1rem",
         border: "solid 1px gray",
-    },
-    sectionBar: {
-        backgroundColor: "#FEEFEA",
-        height: "30px",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "5px",
-        margin: "10px 0",
-    },
-    memberContainer: {
-        display: "grid",
-        gridTemplateColumns: "repeat(5, 1fr)",
-        columnGap: "1rem",
-        margin: "1rem",
-    },
-    reportsContainer: {
-        display: "grid",
-        gridTemplateColumns: "1fr 3fr",
-        columnGap: "1rem",
-        margin: "1rem",
-    },
-    memberItem: {
-        backgroundColor: "#F3F3F3",
-        height: "3rem",
-        textAlign: "center",
-    },
-    reportItem: {
-        backgroundColor: "#F3F3F3",
-        height: "4rem",
-        textAlign: "center",
-    },
-    actionButtonContainer: {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        padding: "10px",
     },
 };
 
