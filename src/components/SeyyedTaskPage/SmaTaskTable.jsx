@@ -18,8 +18,8 @@ const SmaTaskTable = () => {
         { label: 'طبقه', value: '۷', icon: <LayersIcon color="secondary" /> },
         { label: 'پروژه', value: 'بعثت تا ظهور / اسب‌سوار', icon: <WorkOutlineIcon color="secondary" /> },
         { label: 'تعریف کننده', value: 'دکتر', icon: <PersonIcon color="secondary" /> },
-        { label: 'توضیحات', value: ' لورم ایپسوم متن ساختگی باتن ساختگی با تولید سادگی نامفهوم ازتن ساختگی با تولید سادگی نامفهوم ازتن ساختگی با تولید سادگی نامفهوم ازتن ساختگی با تولید سادگی نامفهوم ازتن ساختگی با تولید سادگی نامفهوم ازتن ساختگی با تولید سادگی نامفهوم ازتن ساختگی با تولید سادگی نامفهوم از تولید سادگی نامفهوم از ...', icon: <DescriptionIcon color="secondary" /> },
-        { label: 'پیش نیاز', value: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از ...', icon: <NoteAddIcon color="secondary" /> },
+        { label: 'توضیحات', value: 'لورم ایپسوم متمتن ساختگی با تولید سادگی نامفهوممتن ساختگی با تولید سادگی نامفهوممتن ساختگی با تولید سادگی نامفهوممتن ساختگی با تولید سادگی نامفهوممتن ساختگی با تولید سادگی نامفهومن ساختگی با تولید سادگی نامفهوم از ...', icon: <DescriptionIcon color="secondary" /> },
+        { label: 'پیش نیاز', value: 'لورم ایپسوم متن ساختگ ساختگی با تولید سادگی نامفهومن ساختگی با تولید ساختگی با تولید سادگی نامفهومن ساختگی با تولید ساختگی با تولید سادگی نامفهومن ساختگی با تولید ساختگی با تولید سادگی نامفهومن ساختگی با تولیدی با تولید سادگی نامفهوم از ...', icon: <NoteAddIcon color="secondary" /> },
         { label: 'پیوست', value: 'productspec.word', icon: <AttachFileIcon color="secondary" /> },
     ];
 
@@ -28,6 +28,14 @@ const SmaTaskTable = () => {
             ...prevExpandedRows,
             [index]: !prevExpandedRows[index],
         }));
+    };
+
+    const truncateText = (text, isExpanded) => {
+        const maxLength = 20; // تعداد کاراکترهای قابل نمایش در حالت غیراسپند
+        if (isExpanded || text.length <= maxLength) {
+            return text;
+        }
+        return `${text.slice(0, maxLength)}...`;
     };
 
     return (
@@ -56,14 +64,11 @@ const SmaTaskTable = () => {
                                     <Typography
                                         style={{
                                             overflow: "hidden",
+                                            whiteSpace: "nowrap",
                                             textOverflow: "ellipsis",
-                                            whiteSpace: isExpanded ? "normal" : "nowrap",
-                                            display: "-webkit-box",
-                                            WebkitBoxOrient: "vertical",
-                                            WebkitLineClamp: isExpanded ? "none" : 1,
                                         }}
                                     >
-                                        {row.value}
+                                        {truncateText(row.value, isExpanded)}
                                     </Typography>
                                     {isExpandableRow && (
                                         <IconButton
