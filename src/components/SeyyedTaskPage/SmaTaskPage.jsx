@@ -5,15 +5,94 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import CreateIcon from '@mui/icons-material/Create';
 import AddIcon from '@mui/icons-material/Add';
 
+// Main Page Component
 const SmaTaskPage = () => {
-    const pageStyle = {
+    return (
+        <div style={styles.page}>
+            <div style={styles.container}>
+                <GrayBox />
+                <TitleBar title="عنوان" />
+                <DataContainer />
+                <ActionButton />
+            </div>
+        </div>
+    );
+}
+
+// Gray Box Component
+const GrayBox = () => (
+    <div style={styles.grayBox}></div>
+);
+
+// Title Bar Component
+const TitleBar = ({ title }) => (
+    <div style={styles.titleBar}>
+        <h3>{title}</h3>
+        <div>
+            <Button variant="outlined" color="secondary" style={{ marginRight: "10px" }}>ویرایش</Button>
+            <Button variant="contained" color="error">حذف</Button>
+        </div>
+    </div>
+);
+
+// Data Container Component
+const DataContainer = () => (
+    <div style={styles.dataContainer}>
+        <div style={styles.tableContainer}>
+            <SmaTaskTable />
+        </div>
+        <MemberSection />
+        <ReportsSection />
+    </div>
+);
+
+// Member Section Component
+const MemberSection = () => (
+    <SectionContainer title="مسئولین" buttonLabel="ویرایش مسئولین" buttonIcon={<CreateIcon />}>
+        <div style={styles.memberContainer}>
+            <div style={styles.memberItem}>تست</div>
+        </div>
+    </SectionContainer>
+);
+
+// Reports Section Component
+const ReportsSection = () => (
+    <SectionContainer title="گزارش‌ها" buttonLabel="اضافه کردن گزارش" buttonIcon={<AddIcon />}>
+        <div style={styles.reportsContainer}>
+            <div style={styles.reportItem}>تست</div>
+        </div>
+    </SectionContainer>
+);
+
+// Reusable Section Container Component
+const SectionContainer = ({ title, buttonLabel, buttonIcon, children }) => (
+    <div>
+        <div style={styles.sectionBar}>
+            <h4>{title}</h4>
+            <Button variant="text" color="secondary" style={{ marginRight: "10px" }} startIcon={buttonIcon}>
+                {buttonLabel}
+            </Button>
+        </div>
+        {children}
+    </div>
+);
+
+// Action Button Component
+const ActionButton = () => (
+    <div style={styles.actionButtonContainer}>
+        <Button variant="contained" color="warning" fullWidth>انجام کار</Button>
+    </div>
+);
+
+// Styles
+const styles = {
+    page: {
         display: "grid",
         placeItems: "center",
         width: "100vw",
         height: "100vh",
-    };
-
-    const containerStyle = {
+    },
+    container: {
         display: "grid",
         gridTemplateRows: "1fr auto 2fr auto",
         gap: "10px",
@@ -23,23 +102,32 @@ const SmaTaskPage = () => {
         maxHeight: "600px",
         backgroundColor: "#fff",
         borderRadius: "20px",
-    };
-
-    const grayBoxStyle = {
+    },
+    grayBox: {
         backgroundColor: "#ccc",
         width: "100%",
         height: "100%",
         borderTopLeftRadius: "20px",
         borderTopRightRadius: "20px",
-    };
-
-    const titleBarStyle = {
+    },
+    titleBar: {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
         padding: "10px",
-    };
-    const memberBarStyle = {
+    },
+    dataContainer: {
+        overflowY: "auto",
+    },
+    tableContainer: {
+        height: "100%",
+        overflowY: "auto",
+        margin: "0 10px",
+        padding: "5px",
+        borderRadius: "1rem",
+        border: "solid 1px gray",
+    },
+    sectionBar: {
         backgroundColor: "#FEEFEA",
         height: "30px",
         display: "flex",
@@ -47,102 +135,35 @@ const SmaTaskPage = () => {
         alignItems: "center",
         padding: "5px",
         margin: "10px 0",
-    };
-
-    const tableStyle = {
-        height: "100%",
-        overflowY: "auto",
-        margin: "0 10px",
-        padding: "5px",
-        borderRadius: "1rem",
-        border: "solid 1px gray"
-    };
-
-    const dataContainerStyle = {
-        overflowY: "auto"
-    };
-
-    const memberContainer = {
+    },
+    memberContainer: {
         display: "grid",
-        gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",
+        gridTemplateColumns: "repeat(5, 1fr)",
         columnGap: "1rem",
         margin: "1rem",
-    };
-    
-    const reportsContainer = {
+    },
+    reportsContainer: {
         display: "grid",
         gridTemplateColumns: "1fr 3fr",
         columnGap: "1rem",
         margin: "1rem",
-    }
-
-    const memberItem = {
+    },
+    memberItem: {
         backgroundColor: "#F3F3F3",
         height: "3rem",
         textAlign: "center",
-    };
-    
-    const reportItem = {
+    },
+    reportItem: {
         backgroundColor: "#F3F3F3",
         height: "4rem",
         textAlign: "center",
-    }
-
-    const customButtonStyle = {
+    },
+    actionButtonContainer: {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         padding: "10px",
-    };
-
-    return (
-        <div style={pageStyle}>
-            <div style={containerStyle}>
-                <div style={grayBoxStyle}></div>
-
-                <div style={titleBarStyle}>
-                    <h3>عنوان</h3>
-                    <div>
-                        <Button variant="outlined" color="secondary" style={{ marginRight: "10px" }}>ویرایش</Button>
-                        <Button variant="contained" color="error">حذف</Button>
-                    </div>
-                </div>
-                <div style={dataContainerStyle}>
-                    <div style={tableStyle}>
-                        <SmaTaskTable />
-                    </div>
-                    <div>
-                        <div style={memberBarStyle}>
-                            <h4>مسئولین</h4>
-                            <div>
-                                <Button variant="text" color="secondary" style={{ marginRight: "10px" }} startIcon={<CreateIcon />}>ویرایش مسئولین</Button>
-                            </div>
-                        </div>
-                        <div style={memberContainer}>
-                            <div style={memberItem}>تست</div>
-                        </div>
-                    </div>
-                    <div>
-                        <div style={memberBarStyle}>
-                            <h4>گزارش‌ها</h4>
-                            <div>
-                                <Button variant="text" color="secondary" style={{ marginRight: "10px" }} startIcon={<AddIcon />}>اضافه کردن گزارش</Button>
-                            </div>
-                        </div>
-                        <div style={reportsContainer}>
-                            <div style={reportItem}>تست</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div style={customButtonStyle}>
-                    <Button variant="contained" color="warning" fullWidth>
-                        انجام کار
-                    </Button>
-                </div>
-            </div>
-        </div>
-    );
-}
+    },
+};
 
 export default SmaTaskPage;
