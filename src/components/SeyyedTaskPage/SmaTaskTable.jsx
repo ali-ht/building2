@@ -31,7 +31,7 @@ const SmaTaskTable = () => {
     };
 
     const truncateText = (text, isExpanded) => {
-        const maxLength = 20; // تعداد کاراکترهای قابل نمایش در حالت غیراسپند
+        const maxLength = 40;
         if (isExpanded || text.length <= maxLength) {
             return text;
         }
@@ -63,9 +63,10 @@ const SmaTaskTable = () => {
                                 <TableCell align="right" style={{ borderBottom: "none", padding: "6px", position: "relative" }}>
                                     <Typography
                                         style={{
-                                            overflow: "hidden",
-                                            whiteSpace: "nowrap",
-                                            textOverflow: "ellipsis",
+                                            whiteSpace: isExpanded ? "normal" : "nowrap",
+                                            display: "-webkit-box",
+                                            WebkitBoxOrient: "vertical",
+                                            WebkitLineClamp: isExpanded ? "none" : 1,
                                         }}
                                     >
                                         {truncateText(row.value, isExpanded)}
@@ -76,7 +77,7 @@ const SmaTaskTable = () => {
                                             size="small"
                                             style={{
                                                 position: "absolute",
-                                                right: 0,
+                                                left: 0,
                                                 top: "50%",
                                                 transform: "translateY(-50%)",
                                             }}
