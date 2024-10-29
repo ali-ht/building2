@@ -2,12 +2,18 @@ import React from "react";
 import { Button } from "@mui/material";
 
 // Reusable Section Container Component
-const SectionContainer = ({ title, buttonLabel, buttonIcon, children }) => {
+const SectionContainer = ({ title, buttonLabel, buttonIcon, onButtonClick, children }) => {
     return (
         <div>
             <div style={styles.sectionBar}>
                 <h4>{title}</h4>
-                <Button variant="text" color="secondary" style={{ marginRight: "10px" }} startIcon={buttonIcon}>
+                <Button
+                    variant="text"
+                    color="secondary"
+                    style={{ marginRight: "10px" }}
+                    startIcon={buttonIcon}
+                    onClick={onButtonClick} // اضافه کردن onClick به دکمه
+                >
                     {buttonLabel}
                 </Button>
             </div>
