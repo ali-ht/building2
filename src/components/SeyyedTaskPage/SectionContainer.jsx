@@ -12,7 +12,7 @@ const SectionContainer = ({ title, buttonLabel, buttonIcon, onButtonClick, child
                     color="secondary"
                     style={{ marginRight: "10px" }}
                     startIcon={buttonIcon}
-                    onClick={onButtonClick} // اضافه کردن onClick به دکمه
+                    onClick={onButtonClick}
                 >
                     {buttonLabel}
                 </Button>
