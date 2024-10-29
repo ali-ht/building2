@@ -5,19 +5,16 @@ import { Dialog, DialogTitle, DialogContent, DialogActions, TextField, Button, I
 import SectionContainer from "./SectionContainer";
 import AddIcon from '@mui/icons-material/Add';
 
-
 const allMembers = [
-    "مهدی عباسی", "علی محمدی", "زهرا حسینی", "فاطمه رحیمی", "رضا نوری", "محمد صالحی", "سارا احمدی"
+    "مهدی انصاری", "میثم محمدی", "سیدمهدی حسینی", "ابراهیم ذالی", "رضا امراللهی", "محمد زحمتکش", "علی احمدی"
 ];
 
-// Member Section Component
 const MemberSection = () => {
-    const [members, setMembers] = useState(["مهدی عباسی", "علی محمدی"]);
+    const [members, setMembers] = useState(["مهدی انصاری", "میثم محمدی"]);
     const [open, setOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState("");
     const [filteredMembers, setFilteredMembers] = useState(allMembers);
 
-    // Handlers
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
@@ -58,15 +55,22 @@ const MemberSection = () => {
                         style={{ marginBottom: "1rem" }}
                     />
                     <div>
-                        {filteredMembers.map((member, index) => (
-                            <div key={index} style={styles.memberListItem}>
-                                <span>{member}</span>
-                                <IconButton onClick={() => handleAddMember(member)} color="primary">
-                                    <AddIcon />
-                                </IconButton>
-                            </div>
-                        ))}
+                        {filteredMembers
+                            .filter(member => !members.includes(member))
+                            .map((member, index) => (
+                                <div key={index} style={styles.memberListItem}>
+                                    <span>{member}</span>
+                                    <IconButton
+                                        onClick={() => handleAddMember(member)}
+                                        color="primary"
+                                    >
+                                        <AddIcon />
+                                    </IconButton>
+                                </div>
+                            ))
+                        }
                     </div>
+
                     <div style={{ marginTop: "1rem", fontWeight: "bold" }}>مسئولین فعلی</div>
                     {members.map((member, index) => (
                         <div key={index} style={styles.memberListItem}>
