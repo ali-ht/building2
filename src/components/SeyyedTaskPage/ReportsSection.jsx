@@ -111,7 +111,7 @@ const styles = {
     reportsContainer: {
         display: "grid",
         gridTemplateColumns: "1fr",
-        rowGap: "1rem",
+        rowGap: "0.5rem",
         margin: "1rem",
         fontFamily: "IRANYekanWeb",
     },
@@ -123,10 +123,12 @@ const styles = {
         textAlign: "center",
         alignItems: "center",
         fontFamily: "IRANYekanWeb",
+        borderRadius: "0.6rem",
     },
     reportInfo: {
         padding: "0.5rem",
         fontFamily: "IRANYekanWeb",
+        borderRadius: "0.6rem",
     },
     reportText: {
         padding: "0.5rem",

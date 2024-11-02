@@ -98,7 +98,7 @@ const styles = {
     memberContainer: {
         display: "grid",
         gridTemplateColumns: "repeat(5, 1fr)",
-        columnGap: "1rem",
+        columnGap: "0.5rem",
         margin: "1rem",
     },
     memberItem: {
@@ -117,7 +117,7 @@ const styles = {
         backgroundColor: "#F3F3F3",
         padding: "0.5rem 1rem",
         margin: "0.5rem 0",
-        borderRadius: "5px",
+        borderRadius: "0.6rem",
     }
 };
 
