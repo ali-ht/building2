@@ -10,8 +10,16 @@ const SectionContainer = ({ title, buttonLabel, buttonIcon, onButtonClick, child
                 <Button
                     variant="text"
                     color="secondary"
-                    style={{ marginRight: "10px" }}
-                    startIcon={buttonIcon}
+                    style={{
+                        marginRight: "10px",
+                        fontFamily: "IRANYekanWeb",
+                        color: "#F15F2B"
+                    }}
+                    startIcon={
+                        <span style={{ display: "flex", alignItems: "center", marginLeft: "8px" }}>
+                            {buttonIcon}
+                        </span>
+                    }
                     onClick={onButtonClick}
                 >
                     {buttonLabel}

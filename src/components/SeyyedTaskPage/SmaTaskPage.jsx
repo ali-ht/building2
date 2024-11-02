@@ -29,8 +29,8 @@ const TitleBar = ({ title }) => (
     <div style={styles.titleBar}>
         <h3>{title}</h3>
         <div>
-            <Button variant="outlined" color="secondary" style={{ marginRight: "10px", fontFamily: "IRANYekanWeb" }}>ویرایش</Button>
-            <Button variant="contained" color="error" style={{ fontFamily: "IRANYekanWeb" }}>حذف</Button>
+            <Button variant="outlined" color="secondary" style={{ fontFamily: "IRANYekanWeb", color: "#9E9E9E", border: "2px solid #9E9E9E", marginLeft: "10px", borderRadius: "0.6rem" }}>ویرایش</Button>
+            <Button variant="outlined" style={{ fontFamily: "IRANYekanWeb", color: "#F15F2B", border: "2px solid #F15F2B", borderRadius: "0.6rem" }}>حذف</Button>
         </div>
     </div>
 );
@@ -83,9 +83,8 @@ const styles = {
     },
     tableContainer: {
         height: "100%",
-        overflowY: "auto",
+        overflowY: "hidden",
         margin: "0 10px",
-        padding: "5px",
         borderRadius: "1rem",
         border: "solid 1px gray",
     },

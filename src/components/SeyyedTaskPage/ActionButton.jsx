@@ -5,7 +5,7 @@ import { Button } from "@mui/material";
 const ActionButton = () => {
     return (
         <div style={styles.actionButtonContainer}>
-            <Button variant="contained" color="warning" fullWidth>انجام کار</Button>
+            <Button variant="contained" style={{ fontFamily: "IRANYekanWeb", width: "40%", height: "2.5rem", padding: "0.5rem", margin: "0.5rem", borderRadius: "0.6rem", backgroundColor: "#F15F2B" }}>انجام کار</Button>
         </div>
     )
 };

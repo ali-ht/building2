@@ -16,17 +16,22 @@ import {
 const SmaTaskTable = () => {
     const [expandedRows, setExpandedRows] = useState({});
 
+    // colors
+    const primaryColor = "#f0f0f0";
+    const secondaryColor = "#fff";
+    const iconColor = "#F15F2B";
+
     // Data rows for the table
     const rows = [
-        { label: 'طبقه', value: '۷', icon: <LayersIcon color="secondary" /> },
-        { label: 'پروژه', value: 'بعثت تا ظهور / اسب‌سوار', icon: <WorkOutlineIcon color="secondary" /> },
-        { label: 'تعریف کننده', value: 'دکتر', icon: <PersonIcon color="secondary" /> },
-        { label: 'توضیحات', value: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از ...', icon: <DescriptionIcon color="secondary" /> },
-        { label: 'پیش نیاز', value: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از ...', icon: <NoteAddIcon color="secondary" /> },
-        { label: 'پیوست', value: 'productspec.word', icon: <AttachFileIcon color="secondary" /> },
+        { label: 'طبقه', value: '۷', icon: <LayersIcon sx={{ color: iconColor }} /> },
+        { label: 'پروژه', value: 'بعثت تا ظهور / اسب‌سوار', icon: <WorkOutlineIcon sx={{ color: iconColor }} /> },
+        { label: 'تعریف کننده', value: 'دکتر', icon: <PersonIcon sx={{ color: iconColor }} /> },
+        { label: 'توضیحات', value: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از ...', icon: <DescriptionIcon sx={{ color: iconColor }} /> },
+        { label: 'پیش نیاز', value: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از ...', icon: <NoteAddIcon sx={{ color: iconColor }} /> },
+        { label: 'پیوست', value: 'productspec.word', icon: <AttachFileIcon sx={{ color: iconColor }} /> },
     ];
 
-    // Toggles row expansion for details
+
     const handleRowToggle = (index) => {
         setExpandedRows((prevState) => ({
             ...prevState,
@@ -34,17 +39,15 @@ const SmaTaskTable = () => {
         }));
     };
 
-    // Truncate long text if row is not expanded
     const getDisplayText = (text, isExpanded) => {
         const maxLength = 40;
         return isExpanded || text.length <= maxLength ? text : `${text.slice(0, maxLength)}...`;
     };
 
-    // Determines if a row is expandable
     const isRowExpandable = (label) => label === 'توضیحات' || label === 'پیش نیاز';
 
     return (
-        <TableContainer component={Paper} style={{ boxShadow: "none" }}>
+        <TableContainer component={Paper} sx={{ boxShadow: "none"}}>
             <Table aria-label="SmaTaskTable">
                 <TableBody>
                     {rows.map((row, index) => {
@@ -54,25 +57,33 @@ const SmaTaskTable = () => {
                         return (
                             <TableRow
                                 key={index}
-                                style={{
-                                    backgroundColor: index % 2 === 0 ? "#fff" : "#f0f0f0",
+                                sx={{
+                                    backgroundColor: index % 2 === 0 ? secondaryColor : primaryColor,
                                     height: isExpanded ? "auto" : "2rem",
                                 }}
                             >
                                 {/* Icon Cell */}
-                                <TableCell align="center" style={{ borderBottom: "none", padding: "6px" }}>
+                                <TableCell align="center" sx={{ borderBottom: "none", padding: "6px" }}>
                                     {row.icon}
                                 </TableCell>
 
                                 {/* Label Cell */}
-                                <TableCell align="right" style={{ borderBottom: "none", padding: "6px" }}>
+                                <TableCell align="right" sx={{ borderBottom: "none", padding: "6px" }}>
                                     <Typography>{row.label}</Typography>
                                 </TableCell>
 
                                 {/* Value Cell with Expand Button */}
-                                <TableCell align="right" style={{ borderBottom: "none", padding: "6px", position: "relative" }}>
+                                <TableCell
+                                    align="right"
+                                    sx={{
+                                        borderBottom: "none",
+                                        padding: "6px",
+                                        position: "relative",
+                                        color: "text.primary",
+                                    }}
+                                >
                                     <Typography
-                                        style={{
+                                        sx={{
                                             whiteSpace: isExpanded ? "normal" : "nowrap",
                                             display: "-webkit-box",
                                             WebkitBoxOrient: "vertical",
@@ -86,14 +97,14 @@ const SmaTaskTable = () => {
                                         <IconButton
                                             onClick={() => handleRowToggle(index)}
                                             size="small"
-                                            style={{
+                                            sx={{
                                                 position: "absolute",
                                                 left: 0,
                                                 top: "50%",
                                                 transform: "translateY(-50%)",
                                             }}
                                         >
-                                            <ExpandMoreIcon />
+                                            <ExpandMoreIcon sx={{ color: iconColor }} />
                                         </IconButton>
                                     )}
                                 </TableCell>
@@ -104,6 +115,6 @@ const SmaTaskTable = () => {
             </Table>
         </TableContainer>
     );
-}
+};
 
 export default SmaTaskTable;

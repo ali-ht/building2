@@ -35,7 +35,7 @@ const MemberSection = () => {
     };
 
     return (
-        <SectionContainer title="مسئولین" buttonLabel="ویرایش مسئولین" style={{fontFamily: "IRANYekanWeb"}} buttonIcon={<CreateIcon style={{ fontFamily: "IRANYekanWeb" }}/>} onButtonClick={handleOpen}>
+        <SectionContainer title="مسئولین" buttonLabel="ویرایش مسئولین" buttonIcon={<CreateIcon />} onButtonClick={handleOpen}>
             <div style={styles.memberContainer}>
                 {members.map((member, index) => (
                     <div key={index} style={styles.memberItem}>{member}</div>
@@ -44,7 +44,7 @@ const MemberSection = () => {
 
             {/* Dialog for editing members */}
             <Dialog open={open} onClose={handleClose}>
-                <DialogTitle style={{fontFamily: "IRANYekanWeb"}}>مدیریت اعضا</DialogTitle>
+                <DialogTitle style={{ fontFamily: "IRANYekanWeb" }}>مدیریت اعضا</DialogTitle>
                 <DialogContent>
                     <TextField
                         fullWidth
@@ -62,7 +62,7 @@ const MemberSection = () => {
                                     <span>{member}</span>
                                     <IconButton
                                         onClick={() => handleAddMember(member)}
-                                        color="primary"
+                                        sx={{ color: "#F15F2B" }}
                                     >
                                         <AddIcon />
                                     </IconButton>
@@ -75,14 +75,18 @@ const MemberSection = () => {
                     {members.map((member, index) => (
                         <div key={index} style={styles.memberListItem}>
                             <span>{member}</span>
-                            <IconButton onClick={() => handleDeleteMember(member)} color="secondary">
+                            <IconButton onClick={() => handleDeleteMember(member)}
+                                sx={{ color: "#F15F2B" }}
+                            >
                                 <DeleteIcon />
                             </IconButton>
                         </div>
                     ))}
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={handleClose} color="primary">بستن</Button>
+                    <Button onClick={handleClose} sx={{
+                        color: "#F15F2B", fontFamily: "IRANYekanWeb"
+                    }}>بستن</Button>
                 </DialogActions>
             </Dialog>
         </SectionContainer>

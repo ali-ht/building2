@@ -63,7 +63,7 @@ const ReportsSection = () => {
                         InputLabelProps={{
                             style: { fontFamily: "IRANYekanWeb" }
                         }}
-                         />
+                    />
                     <TextField
                         margin="dense"
                         name="date"
@@ -98,8 +98,8 @@ const ReportsSection = () => {
                     />
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={handleClose} style={{ fontFamily: "IRANYekanWeb" }} color="primary">لغو</Button>
-                    <Button onClick={handleAddReport} style={{ fontFamily: "IRANYekanWeb" }} color="primary">افزودن</Button>
+                    <Button onClick={handleClose} style={{ fontFamily: "IRANYekanWeb", color: "#F15F2B" }}>لغو</Button>
+                    <Button onClick={handleAddReport} style={{ fontFamily: "IRANYekanWeb", color: "#F15F2B" }}>افزودن</Button>
                 </DialogActions>
             </Dialog>
         </SectionContainer>
