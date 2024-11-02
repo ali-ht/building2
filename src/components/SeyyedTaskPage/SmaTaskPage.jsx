@@ -29,8 +29,8 @@ const TitleBar = ({ title }) => (
     <div style={styles.titleBar}>
         <h3>{title}</h3>
         <div>
-            <Button variant="outlined" color="secondary" style={{ marginRight: "10px" }}>ویرایش</Button>
-            <Button variant="contained" color="error">حذف</Button>
+            <Button variant="outlined" color="secondary" style={{ marginRight: "10px", fontFamily: "IRANYekanWeb" }}>ویرایش</Button>
+            <Button variant="contained" color="error" style={{ fontFamily: "IRANYekanWeb" }}>حذف</Button>
         </div>
     </div>
 );

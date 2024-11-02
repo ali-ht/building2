@@ -45,9 +45,9 @@ const ReportsSection = () => {
             </div>
 
             {/* Dialog for adding new report */}
-            <Dialog open={open} onClose={handleClose}>
-                <DialogTitle>افزودن گزارش جدید</DialogTitle>
-                <DialogContent>
+            <Dialog open={open} onClose={handleClose} style={{ fontFamily: "IRANYekanWeb" }}>
+                <DialogTitle style={{ fontFamily: "IRANYekanWeb" }}>افزودن گزارش جدید</DialogTitle>
+                <DialogContent style={{ fontFamily: "IRANYekanWeb" }}>
                     <TextField
                         autoFocus
                         margin="dense"
@@ -57,7 +57,13 @@ const ReportsSection = () => {
                         fullWidth
                         value={newReport.title}
                         onChange={handleChange}
-                    />
+                        InputProps={{
+                            style: { fontFamily: "IRANYekanWeb" }
+                        }}
+                        InputLabelProps={{
+                            style: { fontFamily: "IRANYekanWeb" }
+                        }}
+                         />
                     <TextField
                         margin="dense"
                         name="date"
@@ -66,6 +72,12 @@ const ReportsSection = () => {
                         fullWidth
                         value={newReport.date}
                         onChange={handleChange}
+                        InputProps={{
+                            style: { fontFamily: "IRANYekanWeb" }
+                        }}
+                        InputLabelProps={{
+                            style: { fontFamily: "IRANYekanWeb" }
+                        }}
                     />
                     <TextField
                         margin="dense"
@@ -77,11 +89,17 @@ const ReportsSection = () => {
                         rows={4}
                         value={newReport.text}
                         onChange={handleChange}
+                        InputProps={{
+                            style: { fontFamily: "IRANYekanWeb" }
+                        }}
+                        InputLabelProps={{
+                            style: { fontFamily: "IRANYekanWeb" }
+                        }}
                     />
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={handleClose} color="primary">لغو</Button>
-                    <Button onClick={handleAddReport} color="primary">افزودن</Button>
+                    <Button onClick={handleClose} style={{ fontFamily: "IRANYekanWeb" }} color="primary">لغو</Button>
+                    <Button onClick={handleAddReport} style={{ fontFamily: "IRANYekanWeb" }} color="primary">افزودن</Button>
                 </DialogActions>
             </Dialog>
         </SectionContainer>
@@ -95,6 +113,7 @@ const styles = {
         gridTemplateColumns: "1fr",
         rowGap: "1rem",
         margin: "1rem",
+        fontFamily: "IRANYekanWeb",
     },
     reportItem: {
         display: "grid",
@@ -103,12 +122,15 @@ const styles = {
         height: "4rem",
         textAlign: "center",
         alignItems: "center",
+        fontFamily: "IRANYekanWeb",
     },
     reportInfo: {
         padding: "0.5rem",
+        fontFamily: "IRANYekanWeb",
     },
     reportText: {
         padding: "0.5rem",
+        fontFamily: "IRANYekanWeb",
     }
 };
 

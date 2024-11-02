@@ -35,7 +35,7 @@ const MemberSection = () => {
     };
 
     return (
-        <SectionContainer title="مسئولین" buttonLabel="ویرایش مسئولین" buttonIcon={<CreateIcon />} onButtonClick={handleOpen}>
+        <SectionContainer title="مسئولین" buttonLabel="ویرایش مسئولین" style={{fontFamily: "IRANYekanWeb"}} buttonIcon={<CreateIcon style={{ fontFamily: "IRANYekanWeb" }}/>} onButtonClick={handleOpen}>
             <div style={styles.memberContainer}>
                 {members.map((member, index) => (
                     <div key={index} style={styles.memberItem}>{member}</div>
@@ -44,7 +44,7 @@ const MemberSection = () => {
 
             {/* Dialog for editing members */}
             <Dialog open={open} onClose={handleClose}>
-                <DialogTitle>مدیریت اعضا</DialogTitle>
+                <DialogTitle style={{fontFamily: "IRANYekanWeb"}}>مدیریت اعضا</DialogTitle>
                 <DialogContent>
                     <TextField
                         fullWidth
